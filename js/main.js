@@ -51,3 +51,12 @@ const kittenThree = `<li class="card">
           </li>`;
 
 elementList.innerHTML = kittenOne + kittenTwo +  kittenThree;
+
+const input_search_desc = document.querySelector('.js_in_search_desc');
+const descrSearchText = input_search_desc.value;
+const kittenDesc1 = document.querySelector('.card_race');
+
+
+if( kittenDesc1.includes(descrSearchText) ) {
+  
+}
