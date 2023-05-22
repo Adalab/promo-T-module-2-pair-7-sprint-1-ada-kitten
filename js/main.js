@@ -32,7 +32,7 @@ const kittenOne = `<li class="card">
               />
               <h3 class="card_title">${catName1.toUpperCase()}</h3>
               <h4 class="card_race">${catRace1}</h4>
-              <p class="card_description js_in_search_desc">
+              <p class="card_description">
                 ${catDescription1}
               </p>
             </article>
@@ -46,7 +46,7 @@ const kittenTwo = `<li class="card">
             />
             <h3 class="card_title">${catName2.toUpperCase()}</h3>
             <h4 class="card_race">${catRace2}</h4>
-            <p class="card_description js_in_search_desc">
+            <p class="card_description">
               ${catDescription2}
             </p>
           </li>`;
@@ -59,7 +59,7 @@ const kittenThree = `<li class="card">
             />
             <h3 class="card_title">${catName3.toUpperCase()}</h3>
             <h4 class="card_race">${catRace3}</h4>
-            <p class="card_description js_in_search_desc">
+            <p class="card_description">
               ${catDescription3}
             </p>
           </li>`;
@@ -79,4 +79,9 @@ else if ( catDescription3.includes(descrSearchText) ) {
   elementList.innerHTML = kittenThree;
 } else {
   elementList.innerHTML = '';
+}
+
+let html = '';
+if (catRace1 === '') {
+  document.querySelector('.')
 }
