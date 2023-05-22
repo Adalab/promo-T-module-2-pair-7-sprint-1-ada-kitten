@@ -32,7 +32,7 @@ const kittenOne = `<li class="card">
               />
               <h3 class="card_title">${catName1.toUpperCase()}</h3>
               <h4 class="card_race">${catRace1}</h4>
-              <p class="card_description">
+              <p class="card_description js_in_search_desc">
                 ${catDescription1}
               </p>
             </article>
@@ -46,7 +46,7 @@ const kittenTwo = `<li class="card">
             />
             <h3 class="card_title">${catName2.toUpperCase()}</h3>
             <h4 class="card_race">${catRace2}</h4>
-            <p class="card_description">
+            <p class="card_description js_in_search_desc">
               ${catDescription2}
             </p>
           </li>`;
@@ -59,7 +59,7 @@ const kittenThree = `<li class="card">
             />
             <h3 class="card_title">${catName3.toUpperCase()}</h3>
             <h4 class="card_race">${catRace3}</h4>
-            <p class="card_description">
+            <p class="card_description js_in_search_desc">
               ${catDescription3}
             </p>
           </li>`;
@@ -68,9 +68,15 @@ elementList.innerHTML = kittenOne + kittenTwo +  kittenThree;
 
 const input_search_desc = document.querySelector('.js_in_search_desc');
 const descrSearchText = input_search_desc.value;
-const kittenDesc1 = document.querySelector('.card_race');
 
-
-if( kittenDesc1.includes(descrSearchText) ) {
-  
+if (catDescription1.includes(descrSearchText) ) {
+  elementList.innerHTML = kittenOne;
+}
+else if ( catDescription2.includes(descrSearchText) ) {
+  elementList.innerHTML = kittenTwo;
+}
+else if ( catDescription3.includes(descrSearchText) ) {
+  elementList.innerHTML = kittenThree;
+} else {
+  elementList.innerHTML = '';
 }
