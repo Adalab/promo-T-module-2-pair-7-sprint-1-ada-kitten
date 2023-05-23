@@ -88,7 +88,7 @@ const labelMessageError = document.querySelector(".js-label-error");
 
 const btnForm = document.querySelector(".js-btn-add");
 const btncancel = document.querySelector(".js-btn-cancel");
-const sectionForm = document.querySelector(".js-new-form")
+const sectionForm = document.querySelector(".js-new-form");
 
 let valueDesc = inputDesc.value;
 let valuePhoto = inputPhoto.value;
@@ -111,9 +111,9 @@ if (valueDesc === "" || valuePhoto === "" || valueName === "") {
 btncancel.addEventListener('click',(ev)=> {
   ev.preventDefault();
   sectionForm.classList.toggle('collapsed');
-  valueDesc = '';
-  valuePhoto= '';
-  valueName = '';
+  inputDesc.value = '';
+  inputPhoto.value = '';
+  inputName.value = '';
 })
 
 addButton.addEventListener('click', ()=>{
