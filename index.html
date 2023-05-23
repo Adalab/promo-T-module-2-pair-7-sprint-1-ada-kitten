@@ -29,7 +29,7 @@
         <nav class="menu-nav">
           <ul class="menu">
             <li class="item">
-              <span class="fas fa-plus-circle"> </span>
+              <span class="fas fa-plus-circle js_add-button"> </span>
             </li>
           </ul>
         </nav>
@@ -37,19 +37,19 @@
     </header>
 
     <main>
-      <section class="new-form collapsed">
+      <section class="new-form js-new-form ">
         <h2 class="title">¿Agregamos un nuevo gatito a Adalab?</h2>
         <form class="form">
           <input
             value="url"
-            class="input"
+            class="input js-input-photo"
             type="text"
             placeholder="Url de la foto"
             required
           />
           <input
             value="pepita"
-            class="input"
+            class="input js-input-name"
             type="text"
             placeholder="Nombre"
             required
@@ -61,15 +61,16 @@
             placeholder="Raza"
           />
           <input
-            value="muy linda"
-            class="input"
+            value=""
+            class="input js-input-desc"
             type="text"
             placeholder="Descripción"
-            required
+            
           />
           <label class=""></label>
-          <button class="button">Añadir</button>
-          <button class="button-cancel">Cancelar</button>
+          <p class="js-label-error"></p>
+          <button class="button js-btn-add">Añadir</button>
+          <button class="button-cancel js-btn-cancel">Cancelar</button>
         </form>
       </section>
 

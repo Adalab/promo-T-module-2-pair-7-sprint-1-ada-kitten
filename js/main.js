@@ -81,7 +81,41 @@ else if ( catDescription3.includes(descrSearchText) ) {
   elementList.innerHTML = '';
 }
 
-let html = '';
-if (catRace1 === '') {
-  document.querySelector('.')
+const inputDesc = document.querySelector(".js-input-desc");
+const inputPhoto = document.querySelector(".js-input-photo");
+const inputName = document.querySelector(".js-input-name");
+const labelMessageError = document.querySelector(".js-label-error");
+
+const btnForm = document.querySelector(".js-btn-add");
+const btncancel = document.querySelector(".js-btn-cancel");
+const sectionForm = document.querySelector(".js-new-form")
+
+let valueDesc = inputDesc.value;
+let valuePhoto = inputPhoto.value;
+let valueName = inputName.value;
+const addButton = document.querySelector(".js_add-button");
+
+
+btnForm.addEventListener('click', (ev)=>{
+  ev.preventDefault();
+  console.log("¡Uy! parece que has olvidado algo");
+
+if (valueDesc === "" || valuePhoto === "" || valueName === "") {
+  labelMessageError.innerHTML = "¡Uy! parece que has olvidado algo";
+
+}else {
+  labelMessageError.innerHTML = '';
 }
+})
+
+btncancel.addEventListener('click',(ev)=> {
+  ev.preventDefault();
+  sectionForm.classList.toggle('collapsed');
+  valueDesc = '';
+  valuePhoto= '';
+  valueName = '';
+})
+
+addButton.addEventListener('click', ()=>{
+  sectionForm.classList.toggle("collapsed");
+})
